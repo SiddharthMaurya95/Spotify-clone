@@ -1,0 +1,97 @@
+:root{
+    --a:0;
+}
+.flex{
+    display: flex;
+}
+.align{
+    align-items: center;
+}
+.justifiy{
+    justify-content: center;
+}
+.round{
+    border-radius: 7px;
+}
+.bgB{
+    background-color: black;
+}
+.bgG{
+    background-color: #121212;
+}
+.bgG1{
+    background-color: #1c1c1c;
+}
+.bgG2{
+    background-color: #101010;
+}
+.invert{
+    filter:invert(1);
+}
+.invert1{
+    filter:invert(0.5);
+}
+.m1{
+    margin: 7px;
+}
+.m2{
+    margin:3px;
+    margin-top: 7px;
+    margin-right: 7px;
+}
+.circle{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    padding: 2px;
+}
+
+.btn{
+    height: 40px;
+    width: 80px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn:hover{
+    font-size: 16px;
+}
+.color1{
+    color: black;
+}
+
+
+
+/* Apply to all scrollbars */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    background: #2e2e2e; /* Background color of the scrollbar track */
+  }
+  
+  /* The scrollbar thumb (the part that's draggable) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #555; /* Color of the thumb */
+    border-radius: 10px; /* Roundness of the thumb */
+    border: 3px solid #2e2e2e; /* Padding around thumb */
+  }
+  
+  /* The scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: #2e2e2e; /* Background color of the scrollbar track */
+  }
+
+ .p1{
+    padding: 5px;
+ }
+.dis{
+    font-weight: 100;
+    font-size: 20px;
+}
+.he{
+    font-size: 25px;
+}
+
+  
