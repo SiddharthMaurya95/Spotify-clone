@@ -10,7 +10,7 @@ function convertSecondsToMinSec(seconds) {
 }
 let currSong= new Audio();
 async function getsongs(folder){
-    let s= await fetch(`http://127.0.0.1:5500/Code%20with%20Harry/video%2068/${folder}`);
+    let s= await fetch(`/${folder}`);
     let a = await s.text();
     let div=document.createElement("div");
     div.innerHTML=a;
@@ -60,20 +60,20 @@ const playMusic=(audio,pause=false)=>{
     document.querySelector(".duration").innerHTML="00:00/00:00";
 }
 async function getalbum(){
-    let s= await fetch(`http://127.0.0.1:5500/Code%20with%20Harry/video%2068/songs`);
+    let s= await fetch(`/songs`);
     let a = await s.text();
     let div=document.createElement("div");
     div.innerHTML=a;
     let anchor=div.getElementsByTagName("a");
     Array.from(anchor).forEach( async e=>{
-        if(e.href.includes("/songs/")){
-            let folder=e.href.split("/").slice(-1)[0];
-            let s= await fetch(`http://127.0.0.1:5500/Code%20with%20Harry/video%2068/songs/${folder}/info.json`);
+      if (e.href.includes("/songs") && !e.href.includes(".htaccess")) {
+            let folder = e.href.split("/").slice(-2)[0]
+            let s= await fetch(`/songs/${folder}/info.json`);
             let a = await s.json();
             document.querySelector(".spotifyPlaylist").innerHTML=document.querySelector(".spotifyPlaylist").innerHTML+
             `<div data-folder=${folder} class="card">
             <div class="circle1"><img src="./play1.svg" alt=""></div>
-            <img src="http://127.0.0.1:5500/Code%20with%20Harry/video%2068/songs/${folder}/cover.JPG" alt="">
+            <img src="/songs/${folder}/cover.JPG" alt="">
             <h4 class="he">${a.title}</h4>
             <p class="dis">${a.discription}</p>
         </div>`
