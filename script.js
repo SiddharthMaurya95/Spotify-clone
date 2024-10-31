@@ -60,7 +60,7 @@ const playMusic=(audio,pause=false)=>{
     document.querySelector(".duration").innerHTML="00:00/00:00";
 }
 async function getalbum(){
-    let s= await fetch(`/songs`);
+    let s= await fetch(`Spotify-clone/tree/main/Songs`);
     let a = await s.text();
     let div=document.createElement("div");
     div.innerHTML=a;
